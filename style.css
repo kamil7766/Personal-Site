@@ -1,0 +1,373 @@
+/* colors:
+- #F1EFEF: header (light grey)
+- #697464: green lines (dark green)
+- #E4E4D0: most of the background (light green) */
+
+body {
+    font-size: 17px;
+    background-color: #E4E4D0;
+    font-family: 'Times New Roman', Georgia, serif;
+    min-width: 500px;
+}
+
+.hero {
+    background-color: #F1EFEF;
+    text-align: center;
+    border-bottom: 25px solid #697464;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Francois One', Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 20px 0 60px;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+.hero > img {
+    border-radius: 50%;
+    border: 2px solid #697464;
+    margin: 50px 0;
+}
+
+.hero > p {
+    padding-bottom: 40px;
+    margin: 0;
+}
+
+.resume, .projects, .about-me, .contact-me {
+    margin: 0 15%;
+    padding: 80px 0;
+}
+
+.resume, .projects {
+    border-bottom: 10px solid #697464;
+}
+
+h2 {
+    margin-bottom: 45px;
+    text-decoration: underline;
+}
+
+h4 {
+    margin-bottom: 25px;
+}
+
+.background {
+    display: grid;
+    grid-template-rows: 3.5fr 2fr;
+    grid-template-columns: 3.5fr 2fr;
+    gap: 3px;
+    background-color: #697464;
+    padding: 3px;
+}
+
+.education, .work-experience, .skills, .languages {
+    background-color: #E4E4D0;
+    padding: 30px;
+}
+
+.background > div > ul > li {
+    margin-bottom: 25px;
+}
+
+ul > li > ul > li:first-child {
+    margin-top: 7px;
+}
+
+.background span {
+    font-size: 0.85em;
+}
+
+.carousel-indicators {
+    background-color: #697464;
+    margin: 2% 38%;
+    border-radius: 20px;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #697464;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 37%;
+}
+
+.carousel-inner {
+    border: 3px solid #697464;
+    border-top: none;
+}
+
+.carousel-item > p {
+    text-align: justify;
+    height: 8rem;
+    padding: 3px;
+}
+
+.carousel-item > img {
+    border-top: 3px solid #697464;
+}
+
+/* a rectangles for covering the top parts of the side borders of carousel-inner div */
+.rectangle-left, .rectangle-right {
+    background-color: #E4E4D0;
+    width: 8px;
+    height: 178px;
+    z-index: 1;
+    position: absolute;
+    top: -2px;
+}
+
+/* an additional rule for the left rectangle to position it appriopriately */
+.rectangle-left {
+    left: -5px;
+}
+
+/* an additional rule for the right rectangle to position it appriopriately */
+.rectangle-right {
+    right: -5px;
+}
+
+h5 {
+    padding: 0px 3px;
+}
+
+.about-me > h3 {
+    margin-bottom: 25px;
+}
+
+.about-me h4 {
+    margin-bottom: 15px;
+}
+
+.hobbies {
+    display: flex;
+    gap: 50px;
+}
+
+.movies, .programming {
+    flex-basis: 50%;
+    text-align: justify;
+}
+
+.movies span {
+    font-style: italic;
+}
+
+.hobbies img {
+    float: left;
+    margin: 6.5px 24px 0 0;
+}
+
+.container {
+    max-width: none;
+}
+
+.contact-me {
+    border-top: 2px dashed #697464;
+    background-color: #F1EFEF;
+    padding: 50px 15%;
+    margin: 0;
+}
+
+.contact-me h2 {
+    text-decoration: none;
+}
+
+.col-4 {
+    display: flex;
+    padding: 0px;
+}
+
+.col-4-2 {
+    justify-content: center;
+}
+
+.col-4-3 {
+    justify-content: flex-end;
+}
+
+.contact-me img {
+    min-width: 30px;
+}
+
+.contact-me p {
+    margin: 5px 0 5px 5px;
+}
+
+img, svg {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+
+/* media query breakpoints */
+
+@media (max-width: 1200px) {
+    .resume, .projects, .about-me {
+        margin: 0 2%;
+
+    }
+
+    .hobbies {
+        display: flex;
+        gap: 35px;
+    }
+
+    .contact-me {
+        padding: 50px 2%;
+    }
+
+    .container {
+        margin: 0;
+    }
+}
+
+@media (max-width: 760px) {
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    .background {
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+
+    .education, .work-experience, .skills, .languages {
+        padding: 30px 10px;
+    }
+
+    .about-me > h3 {
+        margin-bottom: 35px;
+    }
+
+    .about-me h4 {
+        text-align: center;
+    }
+
+    .hobbies {
+        display: block;
+    }
+
+    .hobbies img {
+        float: none;
+        width: 300px;
+        display: block;
+        margin: 6.5px auto 10px;
+    }
+
+    .movies p {
+        padding-bottom: 6px;
+    }
+
+    .col-4 {
+        width: 100%;
+        padding: 20px 28%;
+    }
+
+    .contact-me h2 {
+        margin-bottom: 20px;
+    }  
+
+    .col-4-2, .col-4-3 {
+        justify-content: flex-start;
+    }
+}
+
+
+/* media query breakpoints for PROJECT section */
+
+@media (max-width: 1277px)
+{
+    .carousel-item > p {
+        height: 9.5rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 202px;
+    }
+}
+
+@media (max-width: 1200px)
+{
+    .carousel-item > p {
+        height: 6.5rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 154px;
+    }
+}
+
+@media (max-width: 1148px)
+{
+    .carousel-item > p {
+        height: 8rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 178px;
+    }
+}
+
+@media (max-width: 931px)
+{
+    .carousel-item > p {
+        height: 9.5rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 202px;
+    }
+}
+
+@media (max-width: 784px)
+{
+    .carousel-item > p {
+        height: 11rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 226px;
+    }
+}
+
+@media (max-width: 674px)
+{
+    .carousel-item > p {
+        height: 12.5rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 250px;
+    }
+}
+
+@media (max-width: 593px)
+{
+    .carousel-item > p {
+        height: 14rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 274px;
+    }
+}
+
+@media (max-width: 533px)
+{
+    .carousel-item > p {
+        height: 15.5rem;
+    }
+
+    .rectangle-left, .rectangle-right {
+        height: 298px;
+    }
+}
